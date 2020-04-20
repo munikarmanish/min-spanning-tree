@@ -1,0 +1,6 @@
+**.ipynb**
+**__pycache__**
+*.eps
+sample-graphs/
+*.json
+*.png
