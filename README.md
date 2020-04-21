@@ -26,8 +26,7 @@ src/                        # main source tree
         graph.py            # graph implementation
         heap.py             # heap implementation
     viz.py                  # visualization helper functions
-kruskal.py                  # command-line tool to run Kruskal's algorithm
-prim.py                     # command-lien tool to run Prim's algorithm
+run.py                      # run the algorithm on an input graph file
 README.md                   # this file
 report.pdf                  # project report
 requirements.txt            # third-party python packages used
@@ -36,21 +35,20 @@ requirements.txt            # third-party python packages used
 Command-line Usage
 ------------------
 
+Make sure you have `python3` with `matplotlib` and `networkx`.
+
 To run the MST algorithm on a graph:
 
-- Kruskal's algorithm
+    $ ./run.py graphs/small.graph
 
-      python3 kruskal.py graphs/small.graph
-
-- Prim's algorithm
-
-      python3 prim.py graphs/small.graph
-
-Both commands will print the list of MST edges.
+It will print the list of MST edges.
 
 > Note: Graph files are simple text files containing list of edges (one per
 > line). Each line contains 3 elements: source node, destination node,
 > weight. See sample graphs in `graphs/` folder for examples.
+
+For other functionalities (such as visualizing the graph), see:
+`./run.py -h`.
 
 Author
 ------
