@@ -25,8 +25,7 @@ def show_graph(G, size=15):
 
     # draw the nodes and labels
     nx.draw_networkx_nodes(
-        G, pos, node_color="b", node_size=400, linewidths=1, edgecolors="black"
-    )
+        G, pos, node_color="b", node_size=400, linewidths=1, edgecolors="black")
     nx.draw_networkx_labels(G, pos, font_color="white", font_weight="bold")
 
     # draw the edges in a faint color
@@ -34,7 +33,8 @@ def show_graph(G, size=15):
 
     # also draw edge labels if available
     try:
-        edge_labels = {(a, b): int(d["weight"]) for a, b, d in G.edges(data=True)}
+        edge_labels = {(a, b): int(d["weight"])
+                       for a, b, d in G.edges(data=True)}
         nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
     except KeyError:
         pass
@@ -62,8 +62,7 @@ def show_mst(G, mst, size=15):
 
     # draw the nodes and labels
     nx.draw_networkx_nodes(
-        G, pos, node_color="b", node_size=400, linewidths=1, edgecolors="black"
-    )
+        G, pos, node_color="b", node_size=400, linewidths=1, edgecolors="black")
     nx.draw_networkx_labels(G, pos, font_color="white", font_weight="bold")
 
     # draw the edges in a faint color
@@ -76,7 +75,8 @@ def show_mst(G, mst, size=15):
 
     # also draw edge labels if available
     try:
-        edge_labels = {(a, b): int(d["weight"]) for a, b, d in G.edges(data=True)}
+        edge_labels = {(a, b): int(d["weight"])
+                       for a, b, d in G.edges(data=True)}
         nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
     except KeyError:
         pass

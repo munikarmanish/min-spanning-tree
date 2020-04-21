@@ -142,9 +142,8 @@ class Graph:
         """
         G = cls()
         G.add_nodes(graph.nodes)
-        G.add_edges(
-            [(u, v, data.get("weight", 1)) for u, v, data in graph.edges(data=True)]
-        )
+        G.add_edges([(u, v, data.get("weight", 1))
+                     for u, v, data in graph.edges(data=True)])
         return G
 
     def to_nx(self):
