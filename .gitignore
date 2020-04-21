@@ -4,3 +4,4 @@
 sample-graphs/
 *.json
 *.png
+.DS_Store
